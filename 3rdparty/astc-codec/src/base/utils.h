@@ -19,17 +19,17 @@
 #include <cstdio>
 #include <cstdlib>
 
-#ifdef NDEBUG
-#define UTILS_RELEASE_ASSERT(x)                                        \
-  do {                                                                 \
-    const bool result = (x);                                           \
-    if (!result) {                                                     \
-      fprintf(stderr, "Error: UTILS_RELEASE_ASSERT failed: %s\n", #x); \
-      abort();                                                         \
-    }                                                                  \
-  } while (false)
-#else
+// #ifdef NDEBUG
+// #define UTILS_RELEASE_ASSERT(x)                                        \
+//   do {                                                                 \
+//     const bool result = (x);                                           \
+//     if (!result) {                                                     \
+//       fprintf(stderr, "Error: UTILS_RELEASE_ASSERT failed: %s\n", #x); \
+//       abort();                                                         \
+//     }                                                                  \
+//   } while (false)
+// #else
 #define UTILS_RELEASE_ASSERT(x) assert(x)
-#endif
+// #endif
 
 #endif  // ASTC_CODEC_BASE_UTILS_H_
